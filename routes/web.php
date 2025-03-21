@@ -6,6 +6,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+use App\Http\Controllers\UserController;
+
+Route::get('/register', [UserController::class, 'create'])->name('register.create');
+Route::post('/register', [UserController::class, 'store'])->name('register.store');
+
