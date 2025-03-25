@@ -8,7 +8,7 @@
     <h1>Registro de Usuario</h1>
     <form method="POST" action="{{ route('register.store') }}">
         @csrf
-        <input type="text" name="name" placeholder="Nombre" required><br>
+        <input type="text" name="name" placeholder="Nombre completo" required><br>
         <input type="email" name="email" placeholder="Correo electrónico" required><br>
         <input type="password" name="password" placeholder="Contraseña" required><br>
         <input type="password" name="password_confirmation" placeholder="Confirmar contraseña" required><br>
